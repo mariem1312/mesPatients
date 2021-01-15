@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Patient :</h2>
+    </div>
+    <form >
+    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Patient</label>
+    <input readonly type="text" [(ngModel)]="currentPatient.idP" name="idPatient" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Patientt</label>
+    <input type="text"[(ngModel)]= "currentPatient.nomP" name="nomPatient" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Prénom Patient</label>
+    <input type="number" [(ngModel)]= "currentPatient.prenomP" name="prenomPatient" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Maladie Patient</label>
+        <input type="number" [(ngModel)]= "currentPatient.prenomP" name="prenomPatient" class="form-control">
+        </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Date consultation</label>
+    <input type="date" [ngModel]="currentPatient.dateConsultation | date: 'yyyy-MM-dd'" (ngModelChange)=" currentPatient.dateConsultation= $event" name="dateConsultation" class="form-control">
+</div>
+<div class="mt-2">
+<button type="submit" (click)="updatePatient()" class="btn btn-success">Modifer</button>
+</div>
+</form>
+</div>
+

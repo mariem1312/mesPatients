@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PatientsComponent } from './patients/patients.component';
+import { AddPatientComponent } from './add-patient/add-patient.component';
+import { FormsModule } from '@angular/forms';
+import { UpdatePatientComponent } from './update-patient/update-patient.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PatientsComponent,
+    AddPatientComponent,
+    UpdatePatientComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
